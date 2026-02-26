@@ -12,3 +12,4 @@ async function start() {
 }
 
 start();
+// This file connects to the database and starts the Express server. It imports the app configuration from app.js and is the main entry point for the application.

@@ -21,3 +21,6 @@ export async function login(req, res) {
 export async function me(req, res) {
   res.json(req.user);
 }
+
+// Additional functions for registration, password reset, etc. can be added here
+//this code provides basic login and user info retrieval functionality. It can be extended with more features as needed.

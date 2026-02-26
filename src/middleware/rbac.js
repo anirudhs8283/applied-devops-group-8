@@ -6,3 +6,4 @@ export function allowRoles(...roles) {
     next();
   };
 }
+// This middleware factory function takes a list of allowed roles and returns a middleware function that checks if the authenticated user's role is in that list. If not, it responds with a 403 Forbidden error. This can be used to protect routes based on user roles.

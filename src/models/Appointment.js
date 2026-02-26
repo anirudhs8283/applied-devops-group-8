@@ -10,3 +10,4 @@ const AppointmentSchema = new mongoose.Schema({
 }, { timestamps: true });
 
 export default mongoose.model("Appointment", AppointmentSchema);
+// This file defines the Mongoose schema and model for appointments. It includes fields for patient and doctor references, scheduled time, reason, status, and who created the appointment. This model is used in the appointment controller to manage appointment data in MongoDB.
