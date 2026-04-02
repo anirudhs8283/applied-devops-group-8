@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  mongo:
+    image: mongo:7
+    container_name: hospital-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  app:
+    build: .
+    container_name: hospital-backend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+    environment:
+      PORT: 3000
+      MONGO_URI: mongodb://mongo:27017/hospital_db
+      JWT_SECRET: super_secret_change_me
+      JWT_EXPIRES_IN: 1d
+
+volumes:
+  mongo_data:
