@@ -1,0 +1,17 @@
+import request from "supertest";
+import app from "../src/app.js";
+
+describe("Auth API", () => {
+
+  it("should login and return token", async () => {
+    const res = await request(app)
+      .post("/api/auth/login")
+      .send({
+        email: "clerk@hms.com",
+        password: "Clerk@123"
+      });
+
+    if (res.status !== 200) throw new Error("Login failed");
+  });
+
+});

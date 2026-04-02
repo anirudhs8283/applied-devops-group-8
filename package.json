@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon src/server.js",
-    "seed": "node scripts/seedUsers.js"
+    "seed": "node scripts/seedUsers.js",
+    "test": "mocha"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
@@ -17,6 +18,9 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "nodemon": "^3.0.0"
+    "chai": "^6.2.2",
+    "mocha": "^11.7.5",
+    "nodemon": "^3.0.0",
+    "supertest": "^7.2.2"
   }
 }

@@ -25,4 +25,4 @@ jobs:
 
       # Step 4: Run tests (temporary)
       - name: Run tests
-        run: echo "No tests yet"
+        run: npm test"
